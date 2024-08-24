@@ -19,6 +19,12 @@ router.get("/", (req, res) => {
   res.render("index", { title: "Mini Messageboard", messages });
 });
 
+router.get("/details/:id", (req, res) => {
+  const id = req.params.id;
+  const message = messages[id];
+  res.render("details", { title: "Message Details", message });
+});
+
 router.get("/new", (req, res) => {
   res.render("form");
 });
