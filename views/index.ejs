@@ -7,9 +7,7 @@
       <li>Usuário: <%= message.user %></li>
       <li>Data: <%= message.added %></li>
       <li>
-        <button
-          onclick="window.location.href = `${window.location.href}details/${index}`"
-        >
+        <button onclick="window.location.href = '/details/<%= index %>'">
           Detalhes
         </button>
       </li>
