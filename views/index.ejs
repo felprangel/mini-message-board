@@ -1,11 +1,18 @@
 <html>
   <body>
     <h1><%= title %></h1>
-    <% messages.forEach(message => { %>
+    <% messages.forEach((message, index) => { %>
     <ul>
       <li>Mensagem: <%= message.text %></li>
       <li>Usuário: <%= message.user %></li>
       <li>Data: <%= message.added %></li>
+      <li>
+        <button
+          onclick="window.location.href = `${window.location.href}details/${index}`"
+        >
+          Detalhes
+        </button>
+      </li>
     </ul>
     <% }) %>
     <button onclick="window.location.href = `${window.location.href}new`">
