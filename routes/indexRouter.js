@@ -19,4 +19,6 @@ indexRouter.get("/", (req, res) => {
   res.render("index", { title: "Mini Messageboard", messages });
 });
 
+messageRouter.post("/new", (req, res) => {});
+
 module.exports = indexRouter;
