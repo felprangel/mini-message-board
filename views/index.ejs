@@ -3,9 +3,9 @@
     <h1><%= title %></h1>
     <% messages.forEach(message => { %>
     <ul>
-      <li><%= message.text %></li>
-      <li><%= message.user %></li>
-      <li><%= message.added %></li>
+      <li>Mensagem: <%= message.text %></li>
+      <li>Usuário: <%= message.user %></li>
+      <li>Data: <%= message.added %></li>
     </ul>
     <% }) %>
     <button onclick="window.location.href = `${window.location.href}new`">
