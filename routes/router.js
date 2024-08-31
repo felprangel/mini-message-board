@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const router = Router();
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   const mensagens = await db.getMessages();
   res.render("index", { title: "Mini Messageboard", messages });
 });
