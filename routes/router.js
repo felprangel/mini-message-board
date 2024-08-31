@@ -4,7 +4,7 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   const mensagens = await db.getMessages();
-  res.render("index", { title: "Mini Messageboard", messages });
+  res.render("index", { title: "Mini Messageboard", mensagens });
 });
 
 router.get("/details/:id", (req, res) => {
