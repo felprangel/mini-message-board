@@ -7,10 +7,10 @@ router.get("/", async (req, res) => {
   res.render("index", { title: "Mini Messageboard", mensagens });
 });
 
-router.get("/details/:id", (req, res) => {
+router.get("/details/:id", async (req, res) => {
   const id = req.params.id;
-  const message = messages[id];
-  res.render("details", { title: "Message Details", message });
+  const mensagem = await db.getMessage(id);
+  res.render("details", { title: "Message Details", mensagem });
 });
 
 router.get("/new", (req, res) => {
