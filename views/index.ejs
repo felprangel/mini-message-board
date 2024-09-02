@@ -1,13 +1,13 @@
 <html>
   <body>
     <h1><%= title %></h1>
-    <% messages.forEach((message, index) => { %>
+    <% mensagens.forEach((message, index) => { %>
     <ul>
-      <li>Mensagem: <%= message.text %></li>
-      <li>Usuário: <%= message.user %></li>
-      <li>Data: <%= message.added %></li>
+      <li>Mensagem: <%= message.mensagem %></li>
+      <li>Usuário: <%= message.usuario %></li>
+      <li>Data: <%= message.data_criacao %></li>
       <li>
-        <button onclick="window.location.href = '/details/<%= index %>'">
+        <button onclick="window.location.href = '/details/<%= message.id %>'">
           Detalhes
         </button>
       </li>
