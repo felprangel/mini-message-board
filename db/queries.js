@@ -2,6 +2,11 @@ const pool = require("./pool");
 
 async function getMessages() {
   const { rows } = await pool.query("SELECT * FROM messages");
+  rows.forEach((mensagem) => {
+    mensagem.data_criacao = new Date(mensagem.data_criacao).toLocaleString(
+      "pt-BR"
+    );
+  });
   return rows;
 }
 
